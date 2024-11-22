@@ -1,0 +1,59 @@
+body{
+  background-image: url(assets/background.gif);
+  width: 100%;
+  margin: auto;
+}
+.container-home h1{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+}
+.container-home h1::before,
+.container-home h1::after{
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #000000; /* Cambia el color según tu diseño */
+  margin: 0 20px; /* Espaciado entre la línea y el texto */
+}
+/* ------------------ */
+.container-home-p{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+/* ------------------ */
+.container-home-p .text-home{
+  position: relative; /* Para posicionar los pseudo-elementos */
+  display: inline-block; /* Ajusta el contenedor al tamaño del texto */
+  text-align: center; /* Centra el texto */
+  padding: 10px 20px; /* Espaciado interno del texto */
+  font-size: 14px; /* Ajusta el tamaño de letra según tu diseño */
+  line-height: 16px;
+  font-weight: 400;
+}
+.container-home-p .text-home::before,
+.container-home-p .text-home::after {
+  content: "";
+  position: absolute;
+  width: 20px; /* Tamaño horizontal de las líneas */
+  height: 20px; /* Tamaño vertical de las líneas */
+  border: 2px solid #000000; /* Color y grosor de las líneas */
+}
+.container-home-p .text-home::before {
+  top: -5px; /* Ajusta la posición para que sobresalga hacia arriba */
+  left: 30px; /* Ajusta la posición para que sobresalga hacia la izquierda */
+  border-right: none; /* Oculta la línea derecha */
+  border-bottom: none; /* Oculta la línea inferior */
+}
+.container-home-p .text-home::after {
+  bottom: -5px; /* Ajusta la posición para que sobresalga hacia abajo */
+  right: 20px; /* Ajusta la posición para que sobresalga hacia la derecha */
+  border-left: none; /* Oculta la línea izquierda */
+  border-top: none; /* Oculta la línea superior */
+}
+
