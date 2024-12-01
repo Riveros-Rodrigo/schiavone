@@ -21,39 +21,123 @@ body{
   margin: 0 20px; /* Espaciado entre la línea y el texto */
 }
 /* ------------------ */
-.container-home-p{
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
-}
-/* ------------------ */
-.container-home-p .text-home{
+.container .text-home{
   position: relative; /* Para posicionar los pseudo-elementos */
   display: inline-block; /* Ajusta el contenedor al tamaño del texto */
   text-align: center; /* Centra el texto */
-  padding: 10px 20px; /* Espaciado interno del texto */
+  padding: 10px 5px; /* Espaciado interno del texto */
   font-size: 14px; /* Ajusta el tamaño de letra según tu diseño */
   line-height: 16px;
   font-weight: 400;
 }
-.container-home-p .text-home::before,
-.container-home-p .text-home::after {
-  content: "";
-  position: absolute;
-  width: 20px; /* Tamaño horizontal de las líneas */
-  height: 20px; /* Tamaño vertical de las líneas */
-  border: 2px solid #000000; /* Color y grosor de las líneas */
-}
-.container-home-p .text-home::before {
-  top: -5px; /* Ajusta la posición para que sobresalga hacia arriba */
-  left: 30px; /* Ajusta la posición para que sobresalga hacia la izquierda */
-  border-right: none; /* Oculta la línea derecha */
-  border-bottom: none; /* Oculta la línea inferior */
-}
-.container-home-p .text-home::after {
-  bottom: -5px; /* Ajusta la posición para que sobresalga hacia abajo */
-  right: 20px; /* Ajusta la posición para que sobresalga hacia la derecha */
-  border-left: none; /* Oculta la línea izquierda */
-  border-top: none; /* Oculta la línea superior */
+.container {
+  position: relative;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  border: 1px solid transparent; /* Ayuda a centrar visualmente */
 }
 
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  width: 10px; /* Tamaño de las líneas */
+  height: 10px;
+  border: 2px solid black;
+}
+
+.container::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.container::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Líneas de las otras esquinas */
+.container span::before,
+.container span::after {
+  content: "";
+  position: absolute;
+  width: 10px; /* Tamaño de las líneas */
+  height: 10px;
+  border: 2px solid black;
+}
+
+.container span::before {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.container span::after {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+
+/* banderas home */
+.container-flag{
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 5px 0px;
+  margin: 20px 0px;
+}
+.container-flag div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-flag p{
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0px 5px;
+  color: #121212;
+  font-weight: 700;
+}
+/* ----------------------- */
+.conainer-schiavone{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conainer-schiavone .translating p{
+  font-size: 14px;
+  line-height: 18px;
+  color: #282627;
+  font-weight: 400;
+}
+/* FOOTER HOME */
+.container-footer-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px; /* Opcional: esquinas redondeadas */
+}
+.separator {
+  border-left: 1px solid black;
+  height: 20px;
+  margin: 0 40px;
+}
+.links {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: black;
+}
