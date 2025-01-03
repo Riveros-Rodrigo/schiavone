@@ -7,10 +7,14 @@ import './Navbar.css'
 export const Navbar = () => {
   return (
     <div className='navBar'>
-        <img src={about} alt="about me"/>
-        <img src={projects} alt="about me"/>
-        <img src={talks} alt="about me"/>
-        <img src={archive} alt="about me"/>
+      <nav>
+        <ul>
+          <li><NavLink to={"/aboutme"}><img src={about} alt="about me"/></NavLink></li>
+          <li><NavLink to={"projects"}><img src={projects} alt="projects"/></NavLink></li>
+          <li><NavLink to={"letTalk"}><img src={talks} alt="talks"/></NavLink></li>
+          <li><NavLink to={"archive"}></NavLink><img src={archive} alt="archive"/></li>
+        </ul>
+      </nav>
     </div>
   )
 }
